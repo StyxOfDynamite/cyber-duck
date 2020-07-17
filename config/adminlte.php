@@ -237,12 +237,12 @@ return [
             'url'  => 'admin/companies',
             'icon' => 'fas fa-fw fa-building',
         ],
-        ['header' => 'Employee Managment'],
-        [
-            'text' => 'Employees',
-            'url'  => 'admin/employees',
-            'icon' => 'fas fa-fw fa-user',
-        ],
+        // ['header' => 'Employee Managment'],
+        // [
+        //     'text' => 'Employees',
+        //     'url'  => 'admin/employees',
+        //     'icon' => 'fas fa-fw fa-user',
+        // ],
     ],
 
     /*
