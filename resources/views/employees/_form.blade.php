@@ -10,7 +10,7 @@
 	</div>
 	<div class="form-group">
 		@if (isset($companies) && count($companies) > 0)
-			<select class="js-example-basic-single" name="company_id">
+			<select class="js-select" name="company_id">
 				@foreach ($companies as $company)
 					<option value="{{ $company->id }}"
 						@if (isset($employee->company_id) && $company->id == $employee->company->id)
@@ -30,3 +30,9 @@
 		<input type="text" class="form-control" name="phone" value="{{ $employee->phone ?? ''}}" placeholder="Please enter a phone number.">
 	</div>
 </div>
+
+<script type="text/javascript">
+	window.addEventListener('load', function() {
+		$('.js-select').select2();
+	});
+</script>
