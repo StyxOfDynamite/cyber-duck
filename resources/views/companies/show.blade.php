@@ -28,15 +28,15 @@
     @endcomponent
 
     <div class="row h-100 justify-content-center align-items-center">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{ isset($company->logo) ? asset($company->logo) : 'http://via.placeholder.com/100X100'}}" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{ $company->name }}</h5>
-            <p class="card-text">{{ $company->email }}</p>
-            <a href="{{ $company->website ?? '#' }}" class="btn btn-primary">Visit Website</a>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ isset($company->logo) ? asset($company->logo) : 'http://via.placeholder.com/100X100'}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ $company->name }}</h5>
+                <p class="card-text">{{ $company->email }}</p>
+                <a href="{{ $company->website ?? '#' }}" class="btn btn-primary">Visit Website</a>
+            </div>
         </div>
     </div>
-</div>
 
 @endsection
 
