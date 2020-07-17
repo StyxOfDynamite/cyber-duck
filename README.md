@@ -9,7 +9,7 @@ Simple CRM built to showcase laravel skillset.
 - CRUD funcXonality (Create / Read / Update / Delete) for two menu items: Companies and
 Employees.
 - Companies DB table consists of these fields: Name (required), email, logo (minimum
--%%×-%%), website
+-100x100), website
 - Employees DB table consists of these fields: First name (required), last name (required),
 Company (foreign key to Companies), email, phone
 - Use database migrations to create those schemas above
