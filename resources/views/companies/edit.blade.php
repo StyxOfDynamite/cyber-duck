@@ -7,15 +7,8 @@
 @stop
 
 @section('content')
-@if ($errors->any())
-<div class="alert alert-danger">
-    <ul>
-        @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
+
+@include('components.flash-message')
 <div class="row my-5">
     <div class="col text-left">
         <h2>Edit Company</h2>
