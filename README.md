@@ -2,7 +2,7 @@
 
 Simple CRM built to showcase laravel skillset.
 
-- Use hcps://adminlte.io/ as a framework for the applicaXon
+- Use hcps://adminlte.io/ as a framework for the application
 - Basic Laravel Auth: ability to log in as administrator
 - Use database seeds to create first user with email admin@admin.com and password
 “password”
