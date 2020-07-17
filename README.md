@@ -12,10 +12,10 @@ Employees.
 -%%×-%%), website
 - Employees DB table consists of these fields: First name (required), last name (required),
 Company (foreign key to Companies), email, phone
-- Use database migraXons to create those schemas above
+- Use database migrations to create those schemas above
 - Store companies’ logos in storage/app/public folder and make them accessible from public
 - Use basic Laravel resource controllers with default methods – index, create, store etc.
-- Use Laravel’s validaXon funcXon, using Request classes
-- Use Laravel’s paginaXon for showing Companies/Employees list, -% entries per page
+- Use Laravel’s validation funcXon, using Request classes
+- Use Laravel’s pagination for showing Companies/Employees list, -% entries per page
 - Use Laravel make:auth as default Bootstrap-based design theme, but remove ability to
 register
