@@ -1,12 +1,10 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-{{--
-@section('sidebar')
-    @if(auth()->check())
-        // include sidebar here
-    @endif
-@endsection
---}}
+@section('title', 'Employee Details')
+
+@section('content_header')
+<h1 class="m-0 text-dark">Employee</h1>
+@stop
 
 @section('content')
     <div class="row my-5">
@@ -21,14 +19,24 @@
             </div>
         </div>
     </div>
-    @component('components.record-navigator', [
+    @component('vendor.moonbear.blade-components.themes.default.record-navigator', [
         'heading'=> $employee->name,
         'route' => 'employees.show',
         'previous' => $previous,
         'next' => $next
     ])@endcomponent
 
-    <p>Display fields here.</p>
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ isset($employee->company->logo) ? asset($employee->company->logo) : 'http://via.placeholder.com/100X100'}}" alt="Comapny logo">
+            <div class="card-body">
+                <h5 class="card-title">{{ $employee->first_name }} {{ $employee->last_name }}</h5>
+                <p class="card-text">{{ $employee->email }}</p>
+                <p class="card-text">{{ $employee->phone }}</p>
+                <a href="{{ $employee->company->website ?? '#' }}" class="btn btn-primary">Visit Website</a>
+            </div>
+        </div>
+    </div>
 @endsection
 
 

@@ -3,7 +3,7 @@
 @section('title', 'Create Company')
 
 @section('content_header')
-<h1 class="m-0 text-dark">Create Employee</h1>
+<h1 class="m-0 text-dark">Employees</h1>
 @stop
 
 @section('content')
@@ -37,7 +37,7 @@
             <tbody>
             @forelse($employees as $employee)
                 <tr>
-                    <td>{{$employee->id }}</td>
+                    <td><a href="{{ route('employees.show', $employee->id) }}">{{$employee->id }}</a></td>
                     <td>{{$employee->company->name ?? ''}}</td>
                     <td>{{$employee->first_name}}</td>
                     <td>{{$employee->last_name}}</td>
