@@ -26,7 +26,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Comapny</th>
+                <th>Company</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
