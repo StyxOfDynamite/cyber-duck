@@ -34,7 +34,7 @@ class EmployeeUpdateRequest extends FormRequest
             'id' => 'required|unique:employees,id,' . $id,
             'company_id' => 'required|exists:companies,id',
             'first_name' => 'required',
-            'last_name' => 'nullable',
+            'last_name' => 'required',
             'email' => 'nullable|email',
             'phone' => 'nullable',
         ];
