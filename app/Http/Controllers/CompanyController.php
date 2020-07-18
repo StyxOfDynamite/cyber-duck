@@ -55,7 +55,8 @@ class CompanyController extends Controller
         }  
 
         Company::create(compact('name', 'logo', 'website', 'email'));
-        return $this->success('Company added successfully!', 'companies.index');
+        
+        return redirect()->route('companies.index', ['companies' => Company::paginate(10)])->with('success', 'Company added');
     }
 
     /**
@@ -108,7 +109,8 @@ class CompanyController extends Controller
 
         $company->update(compact('name', 'website', 'email', 'logo'));
 
-        return $this->success('Company updated successfully!', 'companies.index');
+        return redirect()->route('companies.index', ['companies' => Company::paginate(10)])->with('success', 'Company updated');
+
     }
 
     /**
@@ -122,7 +124,10 @@ class CompanyController extends Controller
         foreach ($company->employees as $employee) {
             $employee->delete();
         }
+        
         $company->delete();
-        return $this->success('Company deleted successfully!', 'companies.index');
+
+        return redirect()->route('companies.index', ['companies' => Company::paginate(10)])->with('success', 'Company and employees deleted');
+
     }
 }

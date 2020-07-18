@@ -45,7 +45,8 @@ class EmployeeController extends Controller
     public function store(EmployeeStoreRequest $request)
     {
         Employee::create($request->except('_token'));
-        return $this->success('Employee added successfully!', 'employees.index');
+        return redirect()->route('employees.index', ['employees' => Employee::paginate(10)])->with('success', 'Employee added');
+
     }
 
     /**
@@ -86,7 +87,8 @@ class EmployeeController extends Controller
     public function update(EmployeeUpdateRequest $request, Employee $employee)
     {
         $employee->update($request->except('_token'));
-        return $this->success('Employee updated successfully!', 'employees.index');
+        return redirect()->route('employees.index', ['employees' => Employee::paginate(10)])->with('success', 'Employee updated');
+
     }
 
     /**
@@ -98,6 +100,7 @@ class EmployeeController extends Controller
     public function destroy(Employee $employee)
     {
         $employee->delete();
-        return $this->success('Employee deleted successfully!', 'employees.index');
+        return redirect()->route('employees.index', ['employees' => Employee::paginate(10)])->with('success', 'Employee deleted');
+
     }
 }
