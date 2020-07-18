@@ -37,9 +37,9 @@
         <tbody>
             @forelse($employees as $employee)
             <tr>
-                <td><a href="{{ route('employees.show', $employee->id) }}">{{$employee->id }}</a></td>
-                <td>{{$employee->company->name ?? ''}}</td>
-                <td>{{$employee->first_name}}</td>
+                <td>{{$employee->id }}</td>
+                <td><a href="{{ route('companies.show', $employee->company->id) }}">{{$employee->company->name}}</a></td>
+                <td><a href="{{ route('employees.show', $employee->id) }}">{{$employee->first_name}}</a></td>
                 <td>{{$employee->last_name}}</td>
                 <td>{{$employee->email}}</td>
                 <td>{{$employee->phone}}</td>
